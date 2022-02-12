@@ -17,6 +17,7 @@ namespace Ado_Net_ex._1
         public Form1()
         {
             InitializeComponent();
+            this.connection.StateChange += new StateChangeEventHandler(this.connection_StateChange);
         }
         public static string GetConnectionStringByName(string name)
         {
@@ -28,7 +29,7 @@ namespace Ado_Net_ex._1
         string connectionString = GetConnectionStringByName("DBConnect.NorthwindConnectionString");
         SqlConnection connection = new SqlConnection();
 
-      //  string connectionString = @"Data Source=(localDB)\MSSQLLocalDB;Initial Catalog = Northwind; Integrated Security = True";
+        //  string connectionString = @"Data Source=(localDB)\MSSQLLocalDB;Initial Catalog = Northwind; Integrated Security = True";
 
         private void connectDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -100,5 +101,111 @@ namespace Ado_Net_ex._1
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = "SELECT COUNT(*) FROM Products";
+                try
+                {
+                    int number = (int)command.ExecuteScalar();
+                    label1.Text = number.ToString();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        internal class WorkWithDataBase
+        {
+            internal static int ExecuteScalarMetod(string cs, string qv)
+            {
+                using (SqlConnection connection = new SqlConnection(cs))
+                {
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = connection;
+                    connection.Open();
+                    command.CommandText = qv;
+                    int number = (int)command.ExecuteScalar();
+                    return number;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int number = WorkWithDataBase.ExecuteScalarMetod(connectionString, "USE [Northwind] SELECT COUNT(*) FROM [dbo].[Products]");
+                label2.Text = number.ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand("USE [Northwind] SELECT [ProductName], [UnitPrice], [QuantityPerUnit] FROM [dbo].[Products]", connection);
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                       ListViewItem newItem = 
+					    listView1.Items.Add(reader["ProductName"].ToString());
+                        newItem.SubItems.Add(reader.GetDecimal(1).ToString());
+                        newItem.SubItems.Add(reader["QuantityPerUnit"].ToString());
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlTransaction sqlTran = connection.BeginTransaction();
+                SqlCommand command = connection.CreateCommand();
+                command.Transaction = sqlTran;
+                try
+                {
+                    command.CommandText = "INSERT INTO Products (ProductName, UnitPrice, QuantityPerUnit) VALUES('Wrong size', 12, '1 boxes')"; command.ExecuteNonQuery();
+                    command.CommandText = "INSERT INTO Products (ProductName, UnitPrice, QuantityPerUnit) VALUES('Wrong color', 25, '100 ml')"; command.ExecuteNonQuery();
+                    sqlTran.Commit();
+                    MessageBox.Show("Строки записаны в базу данных");
+                }
+                catch (SqlException ex)
+                { 
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        sqlTran.Rollback();
+                    }
+                    catch (Exception exRollback)
+                    {
+                        MessageBox.Show(exRollback.Message);
+                    }
+                }
+            }
+        }
     }
-}
+} 
