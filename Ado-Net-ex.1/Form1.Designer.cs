@@ -102,9 +102,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Количество продуктов";
             // 
             // button2
             // 
@@ -121,9 +121,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(244, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(121, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Количество продуктов";
             // 
             // button3
             // 
@@ -152,18 +152,21 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Название продукта";
+            this.columnHeader1.Width = 280;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Цена";
+            this.columnHeader2.Width = 245;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Фасовка";
+            this.columnHeader3.Width = 169;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(355, 48);
+            this.button4.Location = new System.Drawing.Point(473, 48);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 62);
             this.button4.TabIndex = 7;
