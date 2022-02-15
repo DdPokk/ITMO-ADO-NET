@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex1-2-DBConnection", "Ado-N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex3-DBCommand", "DBCommand\ex3-DBCommand.csproj", "{6CDEB777-4C96-4A16-890C-43C700EA3085}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-DatasetDesigner", "ex4-DatasetDesigner\ex4-DatasetDesigner.csproj", "{AEB85413-9D7D-4977-8859-914AC4633F7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-CreatingDataTable", "ex4-CreatingDataTable\ex4-CreatingDataTable.csproj", "{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6CDEB777-4C96-4A16-890C-43C700EA3085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CDEB777-4C96-4A16-890C-43C700EA3085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CDEB777-4C96-4A16-890C-43C700EA3085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB85413-9D7D-4977-8859-914AC4633F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB85413-9D7D-4977-8859-914AC4633F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB85413-9D7D-4977-8859-914AC4633F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB85413-9D7D-4977-8859-914AC4633F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
