@@ -7,9 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex1-2-DBConnection", "Ado-N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex3-DBCommand", "DBCommand\ex3-DBCommand.csproj", "{6CDEB777-4C96-4A16-890C-43C700EA3085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-DatasetDesigner", "ex4-DatasetDesigner\ex4-DatasetDesigner.csproj", "{AEB85413-9D7D-4977-8859-914AC4633F7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-1-DatasetDesigner", "ex4-DatasetDesigner\ex4-1-DatasetDesigner.csproj", "{AEB85413-9D7D-4977-8859-914AC4633F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-CreatingDataTable", "ex4-CreatingDataTable\ex4-CreatingDataTable.csproj", "{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-2-CreatingDataTable", "ex4-CreatingDataTable\ex4-2-CreatingDataTable.csproj", "{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-3-DataAdapterProgram", "ex4-DataAdapterProgram\ex4-3-DataAdapterProgram.csproj", "{8A3B95BD-5787-4818-9670-A75320FC6385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-4-DataAdapterWizard", "ex4-4-DataAdapterWizard\ex4-4-DataAdapterWizard.csproj", "{D7654363-F850-400C-9DBA-7D02C0C7B358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex-4-5-WorkingDataTable", "ex-4-5-WorkingDataTable\ex-4-5-WorkingDataTable.csproj", "{375C3C2E-4E37-4DC7-A9BC-8FF9AACE3206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex4-6-DataViewExample", "ex4-6-DataViewExample\ex4-6-DataViewExample.csproj", "{97DCA5CC-93B0-4CEF-92B4-E217375957D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B5D1B68-93D9-4D63-99CD-84DEE8E819B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3B95BD-5787-4818-9670-A75320FC6385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3B95BD-5787-4818-9670-A75320FC6385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3B95BD-5787-4818-9670-A75320FC6385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3B95BD-5787-4818-9670-A75320FC6385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7654363-F850-400C-9DBA-7D02C0C7B358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7654363-F850-400C-9DBA-7D02C0C7B358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7654363-F850-400C-9DBA-7D02C0C7B358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7654363-F850-400C-9DBA-7D02C0C7B358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375C3C2E-4E37-4DC7-A9BC-8FF9AACE3206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375C3C2E-4E37-4DC7-A9BC-8FF9AACE3206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375C3C2E-4E37-4DC7-A9BC-8FF9AACE3206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375C3C2E-4E37-4DC7-A9BC-8FF9AACE3206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DCA5CC-93B0-4CEF-92B4-E217375957D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DCA5CC-93B0-4CEF-92B4-E217375957D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DCA5CC-93B0-4CEF-92B4-E217375957D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DCA5CC-93B0-4CEF-92B4-E217375957D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
