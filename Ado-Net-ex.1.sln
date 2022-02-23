@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex-8-4-LINQsql_m", "ex-8-4-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex-9-1-CourseManager", "ex-9-1-CourseManager\ex-9-1-CourseManager.csproj", "{ECC0058E-D16C-4CF1-A9D9-71F1ED8A5870}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex-9-2-CustomerManager", "ex-9-2-CustomerManager\ex-9-2-CustomerManager.csproj", "{68A0BF6D-4391-4BFD-B57C-6A3C28896A37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex-9-2-CodeFirst-2", "ex-9-2-CodeFirst-2\ex-9-2-CodeFirst-2.csproj", "{D18799D6-ECEA-4F44-A264-C6E2777547C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{ECC0058E-D16C-4CF1-A9D9-71F1ED8A5870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECC0058E-D16C-4CF1-A9D9-71F1ED8A5870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECC0058E-D16C-4CF1-A9D9-71F1ED8A5870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A0BF6D-4391-4BFD-B57C-6A3C28896A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A0BF6D-4391-4BFD-B57C-6A3C28896A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A0BF6D-4391-4BFD-B57C-6A3C28896A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A0BF6D-4391-4BFD-B57C-6A3C28896A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18799D6-ECEA-4F44-A264-C6E2777547C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18799D6-ECEA-4F44-A264-C6E2777547C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18799D6-ECEA-4F44-A264-C6E2777547C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18799D6-ECEA-4F44-A264-C6E2777547C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
