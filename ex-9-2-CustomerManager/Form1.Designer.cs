@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.ViporderradioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
@@ -152,6 +153,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ViporderradioButton);
             this.groupBox1.Controls.Add(this.OrderradioButton);
             this.groupBox1.Controls.Add(this.CustomerradioButton);
             this.groupBox1.Location = new System.Drawing.Point(354, 74);
@@ -164,7 +166,7 @@
             // OrderradioButton
             // 
             this.OrderradioButton.AutoSize = true;
-            this.OrderradioButton.Location = new System.Drawing.Point(162, 20);
+            this.OrderradioButton.Location = new System.Drawing.Point(91, 20);
             this.OrderradioButton.Name = "OrderradioButton";
             this.OrderradioButton.Size = new System.Drawing.Size(56, 17);
             this.OrderradioButton.TabIndex = 1;
@@ -254,6 +256,17 @@
             this.GridView.TabIndex = 19;
             this.GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellClick);
             // 
+            // ViporderradioButton
+            // 
+            this.ViporderradioButton.AutoSize = true;
+            this.ViporderradioButton.Location = new System.Drawing.Point(153, 20);
+            this.ViporderradioButton.Name = "ViporderradioButton";
+            this.ViporderradioButton.Size = new System.Drawing.Size(95, 17);
+            this.ViporderradioButton.TabIndex = 2;
+            this.ViporderradioButton.TabStop = true;
+            this.ViporderradioButton.Text = "Вип операции";
+            this.ViporderradioButton.UseVisualStyleBackColor = true;
+            // 
             // CustomerViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +327,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.RadioButton ViporderradioButton;
     }
 }
 

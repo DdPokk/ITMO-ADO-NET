@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static ex_9_2_CodeFirst_2.SampleContext;
 
 namespace ex_9_2_CodeFirst_2
 {
@@ -17,6 +18,7 @@ namespace ex_9_2_CodeFirst_2
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<VipOrder> VipOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,6 +29,13 @@ namespace ex_9_2_CodeFirst_2
         public class Model
         {
         }
+
+        [Table("VipOrders")]
+        public class VipOrder : Order
+        {
+            public string status { get; set; }
+        }
+
 
         public class Customer
         {
@@ -54,7 +63,6 @@ namespace ex_9_2_CodeFirst_2
             public string Description { get; set; }
             public int Quantity { get; set; }
             public DateTime PurchaseDate { get; set; }
-            // Ссылка на покупателя
             public Customer Customer { get; set; }
             public override string ToString()
             {

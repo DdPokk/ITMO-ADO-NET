@@ -21,12 +21,17 @@ namespace ex_9_2_CustomerManager
         public CustomerViewer()
         {
             InitializeComponent();
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
         }
 
         private void Output() 
         { 
-            if (this.CustomerradioButton.Checked == true) GridView.DataSource = context.Customers.ToList(); 
-            else if (this.OrderradioButton.Checked == true) GridView.DataSource = context.Orders.ToList(); 
+            if (this.CustomerradioButton.Checked == true) 
+                GridView.DataSource = context.Customers.ToList(); 
+            else if (this.OrderradioButton.Checked == true) 
+                GridView.DataSource = context.Orders.ToList();
+            else if (this.ViporderradioButton.Checked == true)
+                GridView.DataSource = context.VipOrders.ToList();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -87,8 +92,16 @@ namespace ex_9_2_CustomerManager
             { ProductName = "Видео", 
                 Quantity = 22, 
                 PurchaseDate = DateTime.Parse("10.01.2016") 
-            }); 
-            context.SaveChanges(); orderlistBox.DataSource = context.Orders.ToList();
+            });
+            context.VipOrders.Add(new VipOrder 
+            { 
+                ProductName = "Авто", 
+                Quantity = 101, 
+                PurchaseDate = DateTime.Parse("10.01.2016"), 
+                status = "Высокий"
+            });
+            context.SaveChanges(); 
+            orderlistBox.DataSource = context.Orders.ToList();
         }
 
         private void GridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -133,7 +146,8 @@ namespace ex_9_2_CustomerManager
             var id = Convert.ToInt32(labelid.Text); 
             var customer = context.Customers.Find(id);
             context.Entry(customer).State = EntityState.Deleted;
-            context.SaveChanges(); Output();
+            context.SaveChanges();
+            Output();
         }
     }
 }
